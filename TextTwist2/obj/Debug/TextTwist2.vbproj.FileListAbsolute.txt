@@ -1,0 +1,36 @@
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\TextTwist2.exe.config
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\TextTwist2.exe
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\TextTwist2.pdb
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\TextTwist2.xml
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.AssemblyReference.cache
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.Form1.resources
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.Resources.resources
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.GenerateResource.cache
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.CoreCompileInputs.cache
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.exe
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.xml
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.pdb
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.frmJuego.resources
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.dll
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.pdb
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.xml
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.CopyComplete
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\TextTwist2.exe.config
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\TextTwist2.exe
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\TextTwist2.pdb
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\TextTwist2.xml
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.dll
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.pdb
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.xml
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.AssemblyReference.cache
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.SuggestedBindingRedirects.cache
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.Form1.resources
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.frmJuego.resources
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.Resources.resources
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.GenerateResource.cache
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.CoreCompileInputs.cache
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.CopyComplete
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.exe
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.xml
+G:\Otros ordenadores\Dell XPS15 9550\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.pdb
