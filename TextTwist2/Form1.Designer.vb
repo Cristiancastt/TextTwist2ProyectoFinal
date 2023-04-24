@@ -35,11 +35,11 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("SF Pro Display", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Location = New System.Drawing.Point(82, 308)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1050, 42)
+        Me.Label1.Size = New System.Drawing.Size(1152, 39)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "REARRANGE LETTERS TO MAKE AS MANY WORDS AS YOU CAN!"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -48,7 +48,7 @@ Partial Class Form1
         '
         Me.btnTimed.BackColor = System.Drawing.Color.SteelBlue
         Me.btnTimed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnTimed.Font = New System.Drawing.Font("SF Pro Display", 26.25!, System.Drawing.FontStyle.Bold)
+        Me.btnTimed.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
         Me.btnTimed.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnTimed.Location = New System.Drawing.Point(412, 434)
         Me.btnTimed.Name = "btnTimed"
@@ -61,7 +61,7 @@ Partial Class Form1
         '
         Me.btnUntimed.BackColor = System.Drawing.Color.SteelBlue
         Me.btnUntimed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnUntimed.Font = New System.Drawing.Font("SF Pro Display", 26.25!, System.Drawing.FontStyle.Bold)
+        Me.btnUntimed.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
         Me.btnUntimed.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnUntimed.Location = New System.Drawing.Point(412, 495)
         Me.btnUntimed.Name = "btnUntimed"
@@ -75,7 +75,7 @@ Partial Class Form1
         Me.btnSound.BackColor = System.Drawing.Color.IndianRed
         Me.btnSound.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!)
         Me.btnSound.ForeColor = System.Drawing.Color.White
-        Me.btnSound.Location = New System.Drawing.Point(1137, 677)
+        Me.btnSound.Location = New System.Drawing.Point(1035, 596)
         Me.btnSound.Name = "btnSound"
         Me.btnSound.Size = New System.Drawing.Size(67, 53)
         Me.btnSound.TabIndex = 5
