@@ -101,11 +101,9 @@ Public Class frmJuego
                 Me.lblHora.Text = String.Format("{0:m\:ss}", TimeSpan.FromSeconds(tiempoRestante))
             Else
                 Timer1.Stop()
-                Dim result As DialogResult = MessageBox.Show("Tiempo Finalizado", "¡Juego Finalizado!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                If result = DialogResult.OK Then
-                    Form1.Show()
-                    Me.Hide()
-                End If
+                MessageBox.Show("Tiempo Finalizado", "¡Juego Finalizado!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Form1.Show()
+                Me.Close()
                 'Aquí es donde puedes hacer cualquier cosa que necesites hacer cuando el tiempo se agote
             End If
         Else
@@ -131,8 +129,6 @@ Public Class frmJuego
         Next
         lblTextoBotones.Text = ""
     End Sub
-
-
     Private Sub btnTwist_Click(sender As Object, e As EventArgs) Handles btnTwist.Click
         botonesA = botonesA.OrderBy(Function() Guid.NewGuid()).ToList()
         For i As Integer = 0 To botonesA.Count - 1
@@ -142,7 +138,6 @@ Public Class frmJuego
             boton.Location = New Point(xInicial + (boton.Width + 20) * i, yInicial)
         Next
     End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         lblPuntos.Text = textTwist.Puntos
         Dim palabraComprobar As New Palabra(lblTextoBotones.Text)
