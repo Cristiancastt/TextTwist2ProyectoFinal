@@ -72,10 +72,11 @@ Partial Class Form1
         '
         'btnSound
         '
+        Me.btnSound.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSound.BackColor = System.Drawing.Color.IndianRed
         Me.btnSound.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!)
         Me.btnSound.ForeColor = System.Drawing.Color.White
-        Me.btnSound.Location = New System.Drawing.Point(1035, 596)
+        Me.btnSound.Location = New System.Drawing.Point(1123, 668)
         Me.btnSound.Name = "btnSound"
         Me.btnSound.Size = New System.Drawing.Size(67, 53)
         Me.btnSound.TabIndex = 5
