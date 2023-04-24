@@ -3,11 +3,19 @@
 Module JuegoGlobal
     Public textTwist As Juego
     Public sonido, tiempo As Boolean
-    Public Function Conectar() As Boolean
+    Public Function ConectarMenu() As Boolean
         My.Computer.Audio.Play(My.Resources.MainMenu, AudioPlayMode.BackgroundLoop)
         Return True
     End Function
-    Public Function Desconectar() As Boolean
+    Public Function DesconectarMenu() As Boolean
+        My.Computer.Audio.Stop()
+        Return True
+    End Function
+    Public Function ConectarJuego() As Boolean
+        My.Computer.Audio.Play(My.Resources.MainGame, AudioPlayMode.BackgroundLoop)
+        Return True
+    End Function
+    Public Function DesconectarJuego() As Boolean
         My.Computer.Audio.Stop()
         Return True
     End Function

@@ -93,6 +93,15 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property MainGame() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("MainGame", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property MainMenu() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("MainMenu", resourceCulture)

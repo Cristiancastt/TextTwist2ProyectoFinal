@@ -151,5 +151,11 @@
   <ItemGroup>
     <None Include="Resources\MainMenu.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.04 Underground Cave.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.04-Underground-Cave.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
