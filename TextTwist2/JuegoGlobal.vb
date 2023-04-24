@@ -7,15 +7,11 @@ Module JuegoGlobal
         My.Computer.Audio.Play(My.Resources.MainMenu, AudioPlayMode.BackgroundLoop)
         Return True
     End Function
-    Public Function DesconectarMenu() As Boolean
-        My.Computer.Audio.Stop()
-        Return True
-    End Function
     Public Function ConectarJuego() As Boolean
         My.Computer.Audio.Play(My.Resources.MainGame, AudioPlayMode.BackgroundLoop)
         Return True
     End Function
-    Public Function DesconectarJuego() As Boolean
+    Public Function Desconectar() As Boolean
         My.Computer.Audio.Stop()
         Return True
     End Function

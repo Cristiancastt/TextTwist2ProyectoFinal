@@ -15,13 +15,18 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnSound.Text = "🔊"
         ConectarMenu()
+        sonido = True
     End Sub
 
     Private Sub btnSound_Click_1(sender As Object, e As EventArgs) Handles btnSound.Click
         If btnSound.Text = "🔊" Then
-            If DesconectarMenu() Then btnSound.Text = "🔈"
+            Desconectar()
+            btnSound.Text = "🔈"
+            sonido = False
         Else
-            If ConectarMenu() Then btnSound.Text = "🔊"
+            ConectarMenu()
+            btnSound.Text = "🔊"
+            sonido = True
         End If
     End Sub
 End Class

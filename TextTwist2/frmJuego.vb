@@ -3,6 +3,13 @@
 Public Class frmJuego
     Private tiempoRestante As Integer = 150 'Dos minutos en segundos
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If sonido = True Then
+            btnSonido.Text = "🔊"
+            ConectarJuego()
+        Else
+            btnSonido.Text = "🔈"
+            Desconectar()
+        End If
         If tiempo = True Then
             Me.lblHora.Text = String.Format("{0:m\:ss}", TimeSpan.FromSeconds(tiempoRestante))
             Timer1.Interval = 1000 'Un segundo
@@ -107,9 +114,11 @@ Public Class frmJuego
     End Sub
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnSonido.Click
         If btnSonido.Text = "🔊" Then
-            If DesconectarJuego() Then btnSonido.Text = "🔈"
+            If Desconectar() Then btnSonido.Text = "🔈"
+            sonido = False
         Else
             If ConectarJuego() Then btnSonido.Text = "🔊"
+            sonido = True
         End If
     End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
