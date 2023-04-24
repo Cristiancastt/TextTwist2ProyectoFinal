@@ -3,8 +3,6 @@
 Public Class frmJuego
     Private tiempoRestante As Integer = 150 'Dos minutos en segundos
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnSonido.Text = "🔊"
-        Conectar()
         If tiempo = True Then
             Me.lblHora.Text = String.Format("{0:m\:ss}", TimeSpan.FromSeconds(tiempoRestante))
             Timer1.Interval = 1000 'Un segundo
