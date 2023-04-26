@@ -1,7 +1,6 @@
 ﻿Public Class Juego
-    Private Shared _Ronda As Integer = 1
+    Private Shared _Ronda As Integer = 2
     Private Shared _Puntos As Integer = 0
-
     Public Shared Property Puntos As Integer
         Get
             Return _Puntos
@@ -16,7 +15,6 @@
             Return _Ronda
         End Get
         Set
-
             _Ronda = Value
         End Set
     End Property
@@ -36,10 +34,8 @@
         Next
         Return False ' La palabra no está en el nivel
     End Function
-
-
-    Public Shared Function SubirRonda() As Boolean
-        If Puntos / 1500 = Nivel1.ToArray.Length Then
+    Public Shared Function SubirRonda(Nivel As ArrayList) As Boolean
+        If Puntos / 1500 = Nivel.ToArray.Length Then
             Ronda += 1
             Return True
         End If

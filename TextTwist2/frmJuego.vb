@@ -1,8 +1,11 @@
-﻿Imports ClasesJuego
+﻿Imports System.IO
+Imports ClasesJuego
 
 Public Class frmJuego
     Private tiempoRestante As Integer = 150 'Dos minutos en segundos
+    Dim Nivel As New ArrayList
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        extraerDatosFichero(textTwist.Ronda)
         If sonido = True Then
             btnSonido.Text = "🔊"
             ConectarJuego()
@@ -19,8 +22,32 @@ Public Class frmJuego
             lblHora.Text = "Ꝏ"
         End If
         lblPuntos.Text = textTwist.Puntos
-        GenerarBotones(Nivel1(1).texto)
-        GenerarGapsBlanco(Nivel1)
+        GenerarBotones(Nivel(0).texto)
+        GenerarGapsBlanco(Nivel)
+    End Sub
+    Private Sub extraerDatosFichero(numero As Integer)
+        Dim lineaInicio As Integer = 0
+        Dim lineaFin As Integer = 0
+        If numero = 1 Then
+            lineaInicio = 0
+            lineaFin = 10
+        ElseIf numero = 2 Then
+            lineaInicio = 11
+            lineaFin = 26
+        ElseIf numero = 3 Then
+            lineaInicio = 26
+            lineaFin = 40
+        End If
+        Dim lines As String() = File.ReadAllLines("palabras.txt")
+        Dim contadorLinea As Integer = 0
+        For Each line As String In lines
+            contadorLinea += 1
+            If contadorLinea >= lineaInicio AndAlso contadorLinea <= lineaFin Then
+                Dim valores As String() = line.Split(","c)
+                Dim palabra As New Palabra(valores(0), valores(1))
+                Nivel.Add(palabra)
+            End If
+        Next
     End Sub
     Dim btnsGlobales As New List(Of Button)
     Private Sub Btn_Click(sender As Object, e As EventArgs)
@@ -55,6 +82,7 @@ Public Class frmJuego
                 label.Size = New Size(labelWidth, labelHeight)
                 label.Location = New Point(x, y)
                 label.Tag = palabraGeneradora
+                label.BorderStyle = BorderStyle.FixedSingle
                 Me.Controls.Add(label)
                 x += labelWidth + 5
                 If x > 10 + labelWidth * 10 + espacioEntreLabels * 9 Then
@@ -139,10 +167,11 @@ Public Class frmJuego
         Next
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        textTwist.SubirRonda(Nivel)
         lblPuntos.Text = textTwist.Puntos
         Dim palabraComprobar As New Palabra(lblTextoBotones.Text)
-        If textTwist.ComprobarPalabra(palabraComprobar, Nivel1) Then
-            Dim posicion As Integer = Nivel1.IndexOf(palabraComprobar)
+        If textTwist.ComprobarPalabra(palabraComprobar, Nivel) Then
+            Dim posicion As Integer = Nivel.IndexOf(palabraComprobar)
             Dim lblsEnPosicion As ArrayList = CType(lblsGapsBlancos.Item(posicion), ArrayList)
             For Each lbl As Label In lblsEnPosicion
                 lbl.ForeColor = Color.Black
