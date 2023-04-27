@@ -76,7 +76,7 @@ Partial Class Form1
         Me.btnSound.BackColor = System.Drawing.Color.IndianRed
         Me.btnSound.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!)
         Me.btnSound.ForeColor = System.Drawing.Color.White
-        Me.btnSound.Location = New System.Drawing.Point(1123, 668)
+        Me.btnSound.Location = New System.Drawing.Point(1179, 668)
         Me.btnSound.Name = "btnSound"
         Me.btnSound.Size = New System.Drawing.Size(67, 53)
         Me.btnSound.TabIndex = 5
@@ -98,7 +98,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1216, 742)
+        Me.ClientSize = New System.Drawing.Size(1272, 742)
         Me.Controls.Add(Me.btnSound)
         Me.Controls.Add(Me.btnUntimed)
         Me.Controls.Add(Me.btnTimed)

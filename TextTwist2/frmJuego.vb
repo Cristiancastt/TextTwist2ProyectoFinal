@@ -5,6 +5,7 @@ Public Class frmJuego
     Private tiempoRestante As Integer = 150 'Dos minutos en segundos
     Dim Nivel As New ArrayList
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblRonda.Text = textTwist.Ronda
         extraerDatosFichero(textTwist.Ronda)
         If sonido = True Then
             btnSonido.Text = "🔊"
@@ -30,7 +31,7 @@ Public Class frmJuego
         Dim lineaFin As Integer = 0
         If numero = 1 Then
             lineaInicio = 0
-            lineaFin = 10
+            lineaFin = 1  'poner a 10 cuando acabe pruebas
         ElseIf numero = 2 Then
             lineaInicio = 11
             lineaFin = 26
@@ -99,6 +100,11 @@ Public Class frmJuego
     Private botonesA As List(Of Button) = New List(Of Button)()
 
     Private Sub GenerarBotones(palabra As String)
+
+        'todo borrar todos losbotones llamado   boton.Name = "btnCaracteres" & contadorLetras
+
+
+
         Dim anchoBoton As Integer = 50
         Dim espacioEntreBotones As Integer = 20
         Dim xInicial As Integer = Me.Width - ((anchoBoton + espacioEntreBotones) * palabra.Length - espacioEntreBotones) - 150
@@ -167,7 +173,20 @@ Public Class frmJuego
         Next
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        textTwist.SubirRonda(Nivel)
+        If textTwist.SubirRonda(Nivel) Then
+            textTwist.Puntos = 0
+            textTwist.Ronda += 1
+            For Each btnEliminar As Button In botonesA
+                btnEliminar.Visible = False
+            Next
+            botonesA.Clear()
+            For Each lblEliminar As Label In lblsPalabras
+                lblEliminar.Visible = False
+                lblEliminar.Hide()
+            Next
+            lblsPalabras.Clear()
+
+        End If
         lblPuntos.Text = textTwist.Puntos
         Dim palabraComprobar As New Palabra(lblTextoBotones.Text)
         If textTwist.ComprobarPalabra(palabraComprobar, Nivel) Then
