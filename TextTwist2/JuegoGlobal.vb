@@ -1,7 +1,7 @@
 ﻿Imports ClasesJuego
 
 Module JuegoGlobal
-    Public textTwist As Juego
+    Public textTwist As New Juego
     Public sonido, tiempo As Boolean
     Public Function ConectarMenu() As Boolean
         My.Computer.Audio.Play(My.Resources.MainMenu, AudioPlayMode.BackgroundLoop)

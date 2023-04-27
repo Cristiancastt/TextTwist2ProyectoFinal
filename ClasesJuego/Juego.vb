@@ -1,7 +1,7 @@
 ﻿Public Class Juego
-    Private Shared _Ronda As Integer = 2
-    Private Shared _Puntos As Integer = 0
-    Public Shared Property Puntos As Integer
+    Private _Ronda As Integer = 1
+    Private _Puntos As Integer = 0
+    Public Property Puntos As Integer
         Get
             Return _Puntos
         End Get
@@ -10,7 +10,7 @@
         End Set
     End Property
 
-    Public Shared Property Ronda As Integer
+    Public Property Ronda As Integer
         Get
             Return _Ronda
         End Get
@@ -19,9 +19,9 @@
         End Set
     End Property
 
-    Private Shared PalabrasAcertadas As New ArrayList
+    Private PalabrasAcertadas As New ArrayList
 
-    Public Shared Function ComprobarPalabra(palabra As Palabra, Nivel As ArrayList) As Boolean
+    Public Function ComprobarPalabra(palabra As Palabra, Nivel As ArrayList) As Boolean
         If PalabrasAcertadas.Contains(palabra.Texto) Then
             Return False ' La palabra ya ha sido acertada antes, no sumar puntos
         End If
@@ -34,9 +34,9 @@
         Next
         Return False ' La palabra no está en el nivel
     End Function
-    Public Shared Function SubirRonda(Nivel As ArrayList) As Boolean
+    Public Function SubirRonda(Nivel As ArrayList) As Boolean
         If Puntos / 1500 = Nivel.ToArray.Length Then
-            Ronda += 1
+
             Return True
         End If
         Return False
