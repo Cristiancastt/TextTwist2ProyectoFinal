@@ -1,6 +1,7 @@
 ﻿Imports ClasesJuego
 
 Module JuegoGlobal
+    Public usr As String
     Public textTwist As New Juego
     Public sonido, tiempo As Boolean
     Public Function ConectarMenu() As Boolean

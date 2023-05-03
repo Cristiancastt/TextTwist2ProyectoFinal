@@ -1,0 +1,55 @@
+﻿camote,Tubérculo comestible de América Central y México.
+cometa,Cuerpo celeste compuesto de hielo y polvo que describe una órbita elíptica alrededor del Sol.
+acote,Conjunto de ramas de la vid, después de cortar los racimos.
+cateo,Examen o inspección minuciosa que se hace para buscar algo.
+mateo,Nombre propio de varón.
+meato,Cada una de las aberturas u orificios naturales de algunos animales.
+acto,Acción que realiza una persona.
+ateo,Que niega la existencia de Dios o deidades.
+cate,Verbo que significa poner atención o cuidado en algo.
+oca,Ganso, especialmente el doméstico, de plumaje por lo general blanco o gris.
+vehiculos,Medio de transporte que se utiliza para desplazarse de un lugar a otro.
+lesivo,Que causa daño o perjuicio a alguien o algo.
+celos,Sentimiento de envidia o desconfianza hacia alguien por creer que le quiere quitar algo propio.
+chulo,Que es atractivo o agradable a la vista.
+hielo,Agua en estado sólido, producto de la congelación.
+huevo,Cuerpo redondeado que produce y contiene el embrión de un animal.
+sucio,Que está manchado o contaminado con algo que no es deseable.
+chile,Fruto de la planta del mismo nombre, utilizado como condimento en la comida.
+suelo,Superficie de la tierra que se encuentra bajo nuestros pies.
+cielo,Espacio que se encuentra sobre nosotros y que se ve azul durante el día.
+seco,Que carece de humedad o líquido.
+cole,Forma coloquial de referirse a la escuela o colegio.
+hilo,Cabo o cordel delgado y largo que se utiliza para coser, tejer, etc.
+eco,Repetición de un sonido que se produce cuando éste rebota en una superficie sólida.
+sol,Estrella luminosa que se encuentra en el centro de nuestro sistema planetario.
+Buscarre,buscar de nuevo algo que ya se había buscado.
+Curbareis,forma conjugada del verbo curvar en segunda persona del plural.
+Cabeurras,plural de cabeurra, que en algunas zonas de España significa liebre.
+Rubescar,ponerse rojo debido a la vergüenza o el rubor.
+Escarbur,limpiar o quitar el carbón o hollín acumulado en una superficie.
+Acerbur,cubrir de acero o añadir acero a algo.
+Berrucas,plural de berruca, que es una verruga.
+Recurbas,plural de recurba, que es una herramienta de carpintería.
+Aburresc,forma conjugada del verbo aburrir en tercera persona del singular.
+Subcerra,cerrar algo con un movimiento hacia abajo.
+Securbar,secar algo con la ayuda de una barra o vara.
+Ruscaber,desenterrar algo o remover la tierra.
+Cerrubas,plural de cerruba, que es una fruta tropical.
+Reburcas,forma conjugada del verbo reburcar en segunda persona del singular.
+Curbarse,flexionar o doblar una superficie en forma de curva.
+Barrecus,plural de barrecu, que es una especie de cerdo salvaje.
+Burcares,forma conjugada del verbo burcar en segunda persona del plural.
+Recubras,forma conjugada del verbo recubrir en segunda persona del singular.
+Acrubres,forma conjugada del verbo acrubrir en segunda persona del singular.
+Rubarecs,plural de rubarec, que es un tipo de insecto.
+Escrubar,mezclar o triturar algo con la ayuda de un escrúpulo.
+Caberrus,plural de caberru, que es una especie de abeja.
+Bursace,perteneciente o relativo a una bolsa o saco.
+Recursab,forma conjugada del verbo recursar en tercera persona del singular.
+Urbarces,forma conjugada del verbo urbar en segunda persona del singular.
+Escubrar,limpiar o deshacerse de los restos de algo con agua.
+Saburcer,convertirse en saburoso o lleno de saburía.
+Rubrases,forma conjugada del verbo rubras en segunda persona del singular.
+Ecrubras,forma conjugada del verbo ecrubrar en segunda persona del singular.
+Usbrecar,dar la vuelta o invertir algo.

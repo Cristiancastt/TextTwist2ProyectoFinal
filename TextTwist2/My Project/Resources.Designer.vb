@@ -91,6 +91,46 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property candado() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("candado", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Cristian,1234
+        '''Asiermmg,1234
+        '''ElenaLuz,P@ssw0rd
+        '''Javi123,5ecr3t!
+        '''Maria23_,H0laMund0
+        '''Pablo00,C0ntr@s3n1@
+        '''Lucia33,Qwerty12
+        '''DavidMtz,Myp@ssw0rd
+        '''Silvia20,7h3s3cr3t
+        '''Carlos87,N0t3asy
+        '''Laura1_,@bcd1234
+        '''Alex0_,P@s5word.
+        '''</summary>
+        Friend ReadOnly Property credenciales() As String
+            Get
+                Return ResourceManager.GetString("credenciales", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property interrogante() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("interrogante", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         '''</summary>
         Friend ReadOnly Property MainGame() As System.IO.UnmanagedMemoryStream
@@ -105,6 +145,33 @@ Namespace My.Resources
         Friend ReadOnly Property MainMenu() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("MainMenu", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property mario() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("mario", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a camote,Tubérculo comestible de América Central y México.
+        '''cometa,Cuerpo celeste compuesto de hielo y polvo que describe una órbita elíptica alrededor del Sol.
+        '''acote,Conjunto de ramas de la vid, después de cortar los racimos.
+        '''cateo,Examen o inspección minuciosa que se hace para buscar algo.
+        '''mateo,Nombre propio de varón.
+        '''meato,Cada una de las aberturas u orificios naturales de algunos animales.
+        '''acto,Acción que realiza una persona.
+        '''ateo,Que niega la existencia de Dios o deidades.
+        '''cate,Verbo que signific [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property palabras() As String
+            Get
+                Return ResourceManager.GetString("palabras", resourceCulture)
             End Get
         End Property
     End Module

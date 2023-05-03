@@ -27,7 +27,9 @@ Partial Class Form1
         Me.btnTimed = New System.Windows.Forms.Button()
         Me.btnUntimed = New System.Windows.Forms.Button()
         Me.btnSound = New System.Windows.Forms.Button()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblUsuario = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,7 +52,7 @@ Partial Class Form1
         Me.btnTimed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnTimed.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
         Me.btnTimed.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnTimed.Location = New System.Drawing.Point(412, 434)
+        Me.btnTimed.Location = New System.Drawing.Point(457, 410)
         Me.btnTimed.Name = "btnTimed"
         Me.btnTimed.Size = New System.Drawing.Size(376, 55)
         Me.btnTimed.TabIndex = 2
@@ -63,7 +65,7 @@ Partial Class Form1
         Me.btnUntimed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnUntimed.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
         Me.btnUntimed.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUntimed.Location = New System.Drawing.Point(412, 495)
+        Me.btnUntimed.Location = New System.Drawing.Point(457, 471)
         Me.btnUntimed.Name = "btnUntimed"
         Me.btnUntimed.Size = New System.Drawing.Size(376, 60)
         Me.btnUntimed.TabIndex = 3
@@ -83,6 +85,19 @@ Partial Class Form1
         Me.btnSound.Text = "🔊"
         Me.btnSound.UseVisualStyleBackColor = False
         '
+        'btnLogin
+        '
+        Me.btnLogin.BackColor = System.Drawing.Color.Coral
+        Me.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
+        Me.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnLogin.Location = New System.Drawing.Point(457, 537)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(376, 60)
+        Me.btnLogin.TabIndex = 6
+        Me.btnLogin.Text = "LOGIN"
+        Me.btnLogin.UseVisualStyleBackColor = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.TextTwist2.My.Resources.Resources._81Y2lHoTFqL_transformed_transformed
@@ -93,12 +108,23 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'lblUsuario
+        '
+        Me.lblUsuario.AutoSize = True
+        Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.lblUsuario.Location = New System.Drawing.Point(1174, 9)
+        Me.lblUsuario.Name = "lblUsuario"
+        Me.lblUsuario.Size = New System.Drawing.Size(0, 25)
+        Me.lblUsuario.TabIndex = 7
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1272, 742)
+        Me.Controls.Add(Me.lblUsuario)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.btnSound)
         Me.Controls.Add(Me.btnUntimed)
         Me.Controls.Add(Me.btnTimed)
@@ -118,4 +144,6 @@ Partial Class Form1
     Friend WithEvents btnTimed As Button
     Friend WithEvents btnUntimed As Button
     Friend WithEvents btnSound As Button
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents lblUsuario As Label
 End Class

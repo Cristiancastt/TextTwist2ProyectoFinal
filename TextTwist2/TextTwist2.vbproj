@@ -80,10 +80,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJuego.Designer.vb">
-      <DependentUpon>frmJuego.vb</DependentUpon>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmJuego.vb">
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JuegoGlobal.vb" />
@@ -108,8 +108,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJuego.resx">
-      <DependentUpon>frmJuego.vb</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -156,6 +156,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1.04-Underground-Cave.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3069185-book-education-learn-school_112720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interrogante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\credenciales.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\palabras.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\credenciales.txt" />
+    <Content Include="Resources\palabras.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

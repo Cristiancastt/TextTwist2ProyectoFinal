@@ -37,6 +37,32 @@ TextTwist2
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:TextTwist2.My.Resources.Resources.candado">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TextTwist2.My.Resources.Resources.credenciales">
+<summary>
+  Busca una cadena traducida similar a Cristian,1234
+Asiermmg,1234
+ElenaLuz,P@ssw0rd
+Javi123,5ecr3t!
+Maria23_,H0laMund0
+Pablo00,C0ntr@s3n1@
+Lucia33,Qwerty12
+DavidMtz,Myp@ssw0rd
+Silvia20,7h3s3cr3t
+Carlos87,N0t3asy
+Laura1_,@bcd1234
+Alex0_,P@s5word.
+</summary>
+</member>
+<member name="P:TextTwist2.My.Resources.Resources.interrogante">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:TextTwist2.My.Resources.Resources.MainGame">
 <summary>
   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
@@ -45,6 +71,24 @@ TextTwist2
 <member name="P:TextTwist2.My.Resources.Resources.MainMenu">
 <summary>
   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:TextTwist2.My.Resources.Resources.mario">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TextTwist2.My.Resources.Resources.palabras">
+<summary>
+  Busca una cadena traducida similar a camote,Tubérculo comestible de América Central y México.
+cometa,Cuerpo celeste compuesto de hielo y polvo que describe una órbita elíptica alrededor del Sol.
+acote,Conjunto de ramas de la vid, después de cortar los racimos.
+cateo,Examen o inspección minuciosa que se hace para buscar algo.
+mateo,Nombre propio de varón.
+meato,Cada una de las aberturas u orificios naturales de algunos animales.
+acto,Acción que realiza una persona.
+ateo,Que niega la existencia de Dios o deidades.
+cate,Verbo que signific [resto de la cadena truncado]&quot;;.
 </summary>
 </member>
 </members>

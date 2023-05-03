@@ -36,7 +36,6 @@
     End Function
     Public Function SubirRonda(Nivel As ArrayList) As Boolean
         If Puntos / 1500 = Nivel.ToArray.Length Then
-
             Return True
         End If
         Return False
