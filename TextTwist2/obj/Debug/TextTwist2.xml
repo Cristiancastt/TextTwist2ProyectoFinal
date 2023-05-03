@@ -37,6 +37,16 @@ TextTwist2
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:TextTwist2.My.Resources.Resources.candado">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TextTwist2.My.Resources.Resources.interrogante">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:TextTwist2.My.Resources.Resources.MainGame">
 <summary>
   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
@@ -45,6 +55,11 @@ TextTwist2
 <member name="P:TextTwist2.My.Resources.Resources.MainMenu">
 <summary>
   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:TextTwist2.My.Resources.Resources.mario">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 </members>

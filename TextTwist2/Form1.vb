@@ -29,4 +29,11 @@
             sonido = True
         End If
     End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        lblUsuario.Text = usr
+        frmLogin.Show()
+        'Me.Hide()
+    End Sub
+
 End Class
