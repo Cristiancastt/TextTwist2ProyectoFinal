@@ -82,11 +82,11 @@ Partial Class frmJuego
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Label1.BackColor = System.Drawing.Color.DodgerBlue
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(508, 9)
+        Me.Label1.Location = New System.Drawing.Point(508, 6)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(97, 27)
         Me.Label1.TabIndex = 7
@@ -95,11 +95,11 @@ Partial Class frmJuego
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Label2.BackColor = System.Drawing.Color.DodgerBlue
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(850, 9)
+        Me.Label2.Location = New System.Drawing.Point(850, 6)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 27)
         Me.Label2.TabIndex = 8
@@ -108,11 +108,11 @@ Partial Class frmJuego
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Label3.BackColor = System.Drawing.Color.DodgerBlue
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(703, 9)
+        Me.Label3.Location = New System.Drawing.Point(703, 6)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 27)
         Me.Label3.TabIndex = 9
@@ -121,11 +121,11 @@ Partial Class frmJuego
         'lblPuntos
         '
         Me.lblPuntos.AutoSize = True
-        Me.lblPuntos.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.lblPuntos.BackColor = System.Drawing.Color.DodgerBlue
         Me.lblPuntos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblPuntos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblPuntos.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblPuntos.Location = New System.Drawing.Point(611, 9)
+        Me.lblPuntos.Location = New System.Drawing.Point(611, 6)
         Me.lblPuntos.Name = "lblPuntos"
         Me.lblPuntos.Size = New System.Drawing.Size(62, 27)
         Me.lblPuntos.TabIndex = 10
@@ -134,11 +134,11 @@ Partial Class frmJuego
         'lblRonda
         '
         Me.lblRonda.AutoSize = True
-        Me.lblRonda.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.lblRonda.BackColor = System.Drawing.Color.DodgerBlue
         Me.lblRonda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblRonda.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblRonda.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblRonda.Location = New System.Drawing.Point(806, 9)
+        Me.lblRonda.Location = New System.Drawing.Point(806, 6)
         Me.lblRonda.Name = "lblRonda"
         Me.lblRonda.Size = New System.Drawing.Size(26, 27)
         Me.lblRonda.TabIndex = 11
@@ -150,11 +150,11 @@ Partial Class frmJuego
         'lblHora
         '
         Me.lblHora.AutoSize = True
-        Me.lblHora.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.lblHora.BackColor = System.Drawing.Color.DodgerBlue
         Me.lblHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblHora.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblHora.Location = New System.Drawing.Point(929, 9)
+        Me.lblHora.Location = New System.Drawing.Point(929, 6)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(69, 27)
         Me.lblHora.TabIndex = 12
@@ -189,9 +189,9 @@ Partial Class frmJuego
         'lblTextoBotones
         '
         Me.lblTextoBotones.AutoSize = True
-        Me.lblTextoBotones.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblTextoBotones.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.lblTextoBotones.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
-        Me.lblTextoBotones.Location = New System.Drawing.Point(655, 183)
+        Me.lblTextoBotones.Location = New System.Drawing.Point(800, 186)
         Me.lblTextoBotones.Name = "lblTextoBotones"
         Me.lblTextoBotones.Size = New System.Drawing.Size(0, 39)
         Me.lblTextoBotones.TabIndex = 15
@@ -213,7 +213,7 @@ Partial Class frmJuego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(1221, 661)
         Me.Controls.Add(Me.btnLastWord)
         Me.Controls.Add(Me.lblTextoBotones)

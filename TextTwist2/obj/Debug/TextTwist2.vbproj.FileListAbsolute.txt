@@ -70,3 +70,4 @@ C:\Users\Cristian\Desktop\Proyecto\TextTwist2\TextTwist2ProyectoFinal\TextTwist2
 C:\Users\Cristian\Desktop\Proyecto\TextTwist2\TextTwist2ProyectoFinal\TextTwist2\obj\Debug\TextTwist2.exe
 C:\Users\Cristian\Desktop\Proyecto\TextTwist2\TextTwist2ProyectoFinal\TextTwist2\obj\Debug\TextTwist2.xml
 C:\Users\Cristian\Desktop\Proyecto\TextTwist2\TextTwist2ProyectoFinal\TextTwist2\obj\Debug\TextTwist2.pdb
+C:\Users\Cristian\Desktop\Proyecto\TextTwist2\TextTwist2ProyectoFinal\TextTwist2\obj\Debug\TextTwist2.frmLogin.resources

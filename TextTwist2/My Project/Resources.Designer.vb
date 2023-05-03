@@ -91,6 +91,26 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property candado() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("candado", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property interrogante() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("interrogante", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         '''</summary>
         Friend ReadOnly Property MainGame() As System.IO.UnmanagedMemoryStream
@@ -105,6 +125,16 @@ Namespace My.Resources
         Friend ReadOnly Property MainMenu() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("MainMenu", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property mario() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("mario", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
     End Module
