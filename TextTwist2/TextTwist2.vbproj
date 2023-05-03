@@ -80,13 +80,11 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="..\..\..\..\frmJuego.Designer.vb">
+    <Compile Include="frmJuego.Designer.vb">
       <DependentUpon>frmJuego.vb</DependentUpon>
-      <Link>frmJuego.Designer.vb</Link>
     </Compile>
-    <Compile Include="..\..\..\..\frmJuego.vb">
+    <Compile Include="frmJuego.vb">
       <SubType>Form</SubType>
-      <Link>frmJuego.vb</Link>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -116,9 +114,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\..\frmJuego.resx">
+    <EmbeddedResource Include="frmJuego.resx">
       <DependentUpon>frmJuego.vb</DependentUpon>
-      <Link>frmJuego.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>

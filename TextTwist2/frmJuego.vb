@@ -31,7 +31,7 @@ Public Class frmJuego
         Dim lineaFin As Integer = 0
         If numero = 1 Then
             lineaInicio = 0
-            lineaFin = 1  'todo Poner a 10 cuando acabe pruebas
+            lineaFin = 2  'todo Poner a 10 cuando acabe pruebas
         ElseIf numero = 2 Then
             lineaInicio = 11
             lineaFin = 25
@@ -178,21 +178,20 @@ Public Class frmJuego
                 btnEliminar.Hide()
             Next
             botonesA.Clear()
-
-            For i As Integer = 0 To Nivel.Count - 1
-                For Each lblEliminar As Label In lblsPalabras
-                    lblEliminar.Visible = False
-                    lblEliminar.Hide()
+            For i = 0 To Nivel.Count - 1
+                Dim posicion As Integer = i
+                Dim lblsEnPosicion As ArrayList = CType(lblsGapsBlancos.Item(posicion), ArrayList)
+                For Each lbl As Label In lblsEnPosicion
+                    lbl.Visible = False
+                    lbl.Hide()
                 Next
             Next
             lblsPalabras.Clear()
-
-
+            Nivel.Clear()
 
             extraerDatosFichero(textTwist.Ronda)
             GenerarBotones(Nivel(0).texto)
             GenerarGapsBlanco(Nivel)
-
         End If
         lblPuntos.Text = textTwist.Puntos
         Dim palabraComprobar As New Palabra(lblTextoBotones.Text)
@@ -227,7 +226,6 @@ Public Class frmJuego
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnLastWord.Click
         lblTextoBotones.Text = palabraAcertada
     End Sub
-
     Private Sub Button1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Button1.KeyPress
         lblPuntos.Text = textTwist.Puntos
     End Sub
@@ -241,11 +239,12 @@ Public Class frmJuego
         For Each tag2 As String In lblTagUnico
             btnDef.Name = "btnDef"
             btnDef.FlatStyle = FlatStyle.Flat
-            btnDef.BackgroundImageLayout = ImageLayout.Center
+            btnDef.BackgroundImageLayout = ImageLayout.Stretch
             btnDef.BackgroundImage = New Bitmap(My.Resources.interrogante, 20, 15)
+            'btnDef.Text = "?"
             btnDef.FlatAppearance.BorderSize = 0
             btnDef.Location = New Point(x, y)
-            btnDef.Size = New Size(345, 245)
+            btnDef.Size = New Size(35, 25)
             btnDef.Tag = tag2
             Controls.Add(btnDef)
         Next
