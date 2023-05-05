@@ -45,6 +45,7 @@ Partial Class frmLogin
         '
         'Label1
         '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
         Me.Label1.Location = New System.Drawing.Point(229, 69)
@@ -55,6 +56,7 @@ Partial Class frmLogin
         '
         'Label2
         '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
         Me.Label2.Location = New System.Drawing.Point(234, 151)
@@ -65,6 +67,7 @@ Partial Class frmLogin
         '
         'txtUsername
         '
+        Me.txtUsername.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.75!)
         Me.txtUsername.Location = New System.Drawing.Point(416, 78)
         Me.txtUsername.Name = "txtUsername"
@@ -73,6 +76,7 @@ Partial Class frmLogin
         '
         'txtPassword
         '
+        Me.txtPassword.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
         Me.txtPassword.Location = New System.Drawing.Point(416, 154)
         Me.txtPassword.Name = "txtPassword"
@@ -82,6 +86,7 @@ Partial Class frmLogin
         '
         'btnLogin
         '
+        Me.btnLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnLogin.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!, System.Drawing.FontStyle.Bold)
@@ -95,6 +100,7 @@ Partial Class frmLogin
         '
         'btnRegister
         '
+        Me.btnRegister.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnRegister.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!, System.Drawing.FontStyle.Bold)

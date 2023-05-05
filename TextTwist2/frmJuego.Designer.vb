@@ -42,6 +42,7 @@ Partial Class frmJuego
         '
         'Button1
         '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.BackColor = System.Drawing.Color.SteelBlue
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -55,6 +56,7 @@ Partial Class frmJuego
         '
         'Button2
         '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.BackColor = System.Drawing.Color.SteelBlue
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -68,6 +70,7 @@ Partial Class frmJuego
         '
         'btnTwist
         '
+        Me.btnTwist.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnTwist.BackColor = System.Drawing.Color.SteelBlue
         Me.btnTwist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnTwist.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -81,6 +84,7 @@ Partial Class frmJuego
         '
         'Label1
         '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.DodgerBlue
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -94,6 +98,7 @@ Partial Class frmJuego
         '
         'Label2
         '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.DodgerBlue
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -107,6 +112,7 @@ Partial Class frmJuego
         '
         'Label3
         '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.DodgerBlue
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -120,6 +126,7 @@ Partial Class frmJuego
         '
         'lblPuntos
         '
+        Me.lblPuntos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblPuntos.AutoSize = True
         Me.lblPuntos.BackColor = System.Drawing.Color.DodgerBlue
         Me.lblPuntos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -133,6 +140,7 @@ Partial Class frmJuego
         '
         'lblRonda
         '
+        Me.lblRonda.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblRonda.AutoSize = True
         Me.lblRonda.BackColor = System.Drawing.Color.DodgerBlue
         Me.lblRonda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -149,6 +157,7 @@ Partial Class frmJuego
         '
         'lblHora
         '
+        Me.lblHora.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblHora.AutoSize = True
         Me.lblHora.BackColor = System.Drawing.Color.DodgerBlue
         Me.lblHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -162,6 +171,7 @@ Partial Class frmJuego
         '
         'btnSonido
         '
+        Me.btnSonido.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSonido.BackColor = System.Drawing.Color.IndianRed
         Me.btnSonido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnSonido.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -175,6 +185,7 @@ Partial Class frmJuego
         '
         'Button6
         '
+        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button6.BackColor = System.Drawing.Color.DimGray
         Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button6.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -188,6 +199,7 @@ Partial Class frmJuego
         '
         'lblTextoBotones
         '
+        Me.lblTextoBotones.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblTextoBotones.AutoSize = True
         Me.lblTextoBotones.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.lblTextoBotones.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
@@ -198,6 +210,7 @@ Partial Class frmJuego
         '
         'btnLastWord
         '
+        Me.btnLastWord.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLastWord.BackColor = System.Drawing.Color.SteelBlue
         Me.btnLastWord.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnLastWord.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

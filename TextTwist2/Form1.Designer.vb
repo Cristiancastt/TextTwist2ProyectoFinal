@@ -38,6 +38,7 @@ Partial Class Form1
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -51,6 +52,7 @@ Partial Class Form1
         '
         'btnTimed
         '
+        Me.btnTimed.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnTimed.BackColor = System.Drawing.Color.SteelBlue
         Me.btnTimed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnTimed.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
@@ -64,6 +66,7 @@ Partial Class Form1
         '
         'btnUntimed
         '
+        Me.btnUntimed.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnUntimed.BackColor = System.Drawing.Color.SteelBlue
         Me.btnUntimed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnUntimed.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
@@ -90,6 +93,7 @@ Partial Class Form1
         '
         'btnLogin
         '
+        Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnLogin.BackColor = System.Drawing.Color.Coral
         Me.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold)
@@ -103,6 +107,7 @@ Partial Class Form1
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox1.BackgroundImage = Global.TextTwist2.My.Resources.Resources._81Y2lHoTFqL_transformed_transformed
         Me.PictureBox1.Image = Global.TextTwist2.My.Resources.Resources._81Y2lHoTFqL_transformed_transformed
         Me.PictureBox1.Location = New System.Drawing.Point(89, -51)
@@ -113,15 +118,17 @@ Partial Class Form1
         '
         'lblUsuario
         '
+        Me.lblUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblUsuario.AutoSize = True
         Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
-        Me.lblUsuario.Location = New System.Drawing.Point(1174, 9)
+        Me.lblUsuario.Location = New System.Drawing.Point(1102, 9)
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(0, 25)
         Me.lblUsuario.TabIndex = 7
         '
         'lstRanking
         '
+        Me.lstRanking.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lstRanking.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.lstRanking.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstRanking.FormattingEnabled = True

@@ -27,7 +27,8 @@ Public Class frmLogin
                 usrpswrd = txtPassword.Text
                 MessageBox.Show("Credenciales Correctas", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 registrado = True
-                Me.Hide()
+                Form1.Show()
+                Me.Close()
                 Return
             End If
         Next

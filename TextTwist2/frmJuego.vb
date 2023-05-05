@@ -120,6 +120,7 @@ Public Class frmJuego
             boton.BackColor = Color.White
             boton.Location = New Point(xInicial, yInicial)
             boton.Text = letra.ToString.ToUpper
+            boton.Anchor = (AnchorStyles.Bottom) + (AnchorStyles.Right)
             Me.Controls.Add(boton)
             xInicial += anchoBoton + espacioEntreBotones
             AddHandler boton.Click, AddressOf Btn_Click
@@ -195,8 +196,6 @@ Public Class frmJuego
             GenerarBotones(Nivel(0).texto)
             GenerarGapsBlanco(Nivel)
         End If
-
-
 
         lblPuntos.Text = textTwist.Puntos
         Dim palabraComprobar As New Palabra(lblTextoBotones.Text)
@@ -311,7 +310,6 @@ Public Class frmJuego
     End Sub
     Private Sub btnDef_click(sender As Object, a As EventArgs)
         Dim btnDefSendes As Button = sender
-        Dim defMostrar As Palabra
         For Each tag As String In lblTagUnico
             If btnDefSendes.Tag.Equals(tag) Then
                 For Each palBuscar As Palabra In Nivel
