@@ -86,7 +86,7 @@ Partial Class frmLogin
         Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!, System.Drawing.FontStyle.Bold)
         Me.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnLogin.Location = New System.Drawing.Point(156, 264)
+        Me.btnLogin.Location = New System.Drawing.Point(154, 258)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(199, 58)
         Me.btnLogin.TabIndex = 5
@@ -99,7 +99,7 @@ Partial Class frmLogin
         Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!, System.Drawing.FontStyle.Bold)
         Me.btnRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnRegister.Location = New System.Drawing.Point(408, 264)
+        Me.btnRegister.Location = New System.Drawing.Point(406, 258)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Size = New System.Drawing.Size(199, 58)
         Me.btnRegister.TabIndex = 6

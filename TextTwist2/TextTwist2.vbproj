@@ -181,5 +181,13 @@
   <ItemGroup>
     <None Include="Resources\candado.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ficheros\credenciales.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ficheros\palabras.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

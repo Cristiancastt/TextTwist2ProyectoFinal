@@ -17,28 +17,32 @@ Public Class frmLogin
         Dim username As String = txtUsername.Text
         Dim password As String = txtPassword.Text
         ' Verificar las credenciales en el archivo de texto
-        Dim filePath As String = "credenciales.txt"
+        Dim filePath As String = "../.././Ficheros/credenciales.txt"
         Dim credentials() As String = File.ReadAllLines(filePath)
         For Each line As String In credentials
             Dim parts() As String = line.Split(",")
             If parts(0) = username AndAlso parts(1) = password Then
                 ' Credenciales correctas, mostrar el formulario principal y ocultar el formulario de inicio de sesión
                 usr = txtUsername.Text
+                usrpswrd = txtPassword.Text
                 MessageBox.Show("Credenciales Correctas", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                registrado = True
                 Me.Hide()
                 Return
             End If
         Next
         ' Credenciales incorrectas, mostrar un mensaje de error
         MessageBox.Show("Credenciales incorrectas. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        registrado = False
     End Sub
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         Dim username As String = txtUsername.Text
         Dim password As String = txtPassword.Text
+        Dim puntuacion As String = 0 ' asumiendo que la puntuación se ingresa manualmente en un cuadro de texto
         ' Guardar los datos en un archivo de texto
-        Dim filePath As String = "credenciales.txt"
+        Dim filePath As String = "../.././Ficheros/credenciales.txt"
         Dim lines() As String = File.ReadAllLines(filePath)
-        Dim data As String = username & "," & password & vbCrLf
+        Dim data As String = username & "," & password & "," & puntuacion & vbCrLf ' agregar la puntuación a la cadena de datos
         For Each line As String In lines
             Dim parts() As String = line.Split(",")
             Dim existingUsername As String = parts(0)
