@@ -33,7 +33,7 @@ Public Class frmJuego
         Dim lineaFin As Integer = 0
         If numero = 1 Then
             lineaInicio = 0
-            lineaFin = 2  'todo Poner a 10 cuando acabe pruebas
+            lineaFin = 10  'todo Poner a 10 cuando acabe pruebas
         ElseIf numero = 2 Then
             lineaInicio = 11
             lineaFin = 25
@@ -41,16 +41,19 @@ Public Class frmJuego
             lineaInicio = 26
             lineaFin = 40
         End If
-        Dim lines As String() = File.ReadAllLines("../.././Ficheros/palabras.txt")
-        Dim contadorLinea As Integer = 0
-        For Each line As String In lines
-            contadorLinea += 1
-            If contadorLinea >= lineaInicio AndAlso contadorLinea <= lineaFin Then
-                Dim valores As String() = line.Split(","c)
-                Dim palabra As New Palabra(valores(0), valores(1))
-                Nivel.Add(palabra)
-            End If
-        Next
+        Dim filePath As String = "../.././Ficheros/palabras.txt"
+        If FicheroExisteComprobacion(filePath) Then
+            Dim lines As String() = File.ReadAllLines(filePath)
+            Dim contadorLinea As Integer = 0
+            For Each line As String In lines
+                contadorLinea += 1
+                If contadorLinea >= lineaInicio AndAlso contadorLinea <= lineaFin Then
+                    Dim valores As String() = line.Split(","c)
+                    Dim palabra As New Palabra(valores(0), valores(1))
+                    Nivel.Add(palabra)
+                End If
+            Next
+        End If
     End Sub
     Dim btnsGlobales As New List(Of Button)
     Private Sub Btn_Click(sender As Object, e As EventArgs)
@@ -136,7 +139,7 @@ Public Class frmJuego
             Else
                 Timer1.Stop()
                 MessageBox.Show("Tiempo Finalizado", "¡Juego Finalizado!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Form1.Show()
+                frmMenu.Show()
                 Me.Close()
                 'Aquí es donde puedes hacer cualquier cosa que necesites hacer cuando el tiempo se agote
             End If
@@ -154,7 +157,7 @@ Public Class frmJuego
         End If
     End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Form1.Show()
+        frmMenu.Show()
         Me.Close()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -173,9 +176,11 @@ Public Class frmJuego
         Next
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        lblPuntos.Text = textTwist.Puntos
         If textTwist.SubirRonda(Nivel) Then
             textTwist.Puntos = 0
             textTwist.Ronda += 1
+            lblPuntos.Text = textTwist.Puntos
             For Each btnEliminar As Button In botonesA
                 btnEliminar.Visible = False
                 btnEliminar.Hide()
@@ -191,7 +196,10 @@ Public Class frmJuego
             Next
             lblsPalabras.Clear()
             Nivel.Clear()
-
+            EliminarBotones()
+            lblTag.Clear()
+            lblTagUnico.Clear()
+            lblsGapsBlancos.Clear()
             extraerDatosFichero(textTwist.Ronda)
             GenerarBotones(Nivel(0).texto)
             GenerarGapsBlanco(Nivel)
@@ -227,7 +235,6 @@ Public Class frmJuego
         End If
 
         If registrado Then
-
             Dim nombreUsuario As String = usr
             Dim password As String = usrpswrd
             Dim puntuacionActual As Integer = Integer.Parse(textTwist.Puntos)
@@ -235,49 +242,50 @@ Public Class frmJuego
             ' Verificar si el usuario ya existe en el archivo de texto y obtener su puntuación total
             Dim puntuacionTotal As Integer = 0
             Dim filePath As String = "../.././Ficheros/credenciales.txt"
-            Dim lines() As String = File.ReadAllLines(filePath)
-            For Each line As String In lines
-                Dim parts() As String = line.Split(",")
-                Dim username As String = parts(0)
-                Dim pwd As String = parts(1)
-                Dim puntuacion As Integer
-                If parts.Length >= 3 AndAlso Integer.TryParse(parts(2), puntuacion) Then
-                    If username = nombreUsuario AndAlso pwd = password Then
-                        puntuacionTotal = puntuacion
+            If FicheroExisteComprobacion(filePath) Then
+                Dim lines() As String = File.ReadAllLines(filePath)
+                For Each line As String In lines
+                    Dim parts() As String = line.Split(",")
+                    Dim username As String = parts(0)
+                    Dim pwd As String = parts(1)
+                    Dim puntuacion As Integer
+                    If parts.Length >= 3 AndAlso Integer.TryParse(parts(2), puntuacion) Then
+                        If username = nombreUsuario AndAlso pwd = password Then
+                            puntuacionTotal = puntuacion
+                            Exit For
+                        End If
+                    End If
+                Next
+
+                ' Sumar la puntuación actual a la puntuación total
+                puntuacionTotal += puntuacionActual
+
+                ' Actualizar la línea correspondiente en el archivo de texto con la nueva puntuación total
+                Dim updatedLines As New List(Of String)()
+                Dim lineIndex As Integer = -1
+                For i As Integer = 0 To lines.Length - 1
+                    Dim parts() As String = lines(i).Split(",")
+                    Dim username As String = parts(0)
+                    If username = nombreUsuario Then
+                        lineIndex = i
                         Exit For
                     End If
+                Next
+                If lineIndex >= 0 Then
+                    Dim parts() As String = lines(lineIndex).Split(",")
+                    updatedLines.AddRange(lines.Take(lineIndex))
+                    updatedLines.Add(nombreUsuario & "," & password & "," & puntuacionTotal.ToString())
+                    updatedLines.AddRange(lines.Skip(lineIndex + 1))
+                    File.WriteAllLines(filePath, updatedLines)
+                Else
+                    ' Si el usuario no existe, agregar una nueva línea al archivo de texto con sus datos y puntuación total
+                    Dim data As String = nombreUsuario & "," & password & "," & puntuacionTotal.ToString() & vbCrLf
+                    File.AppendAllText(filePath, data)
                 End If
-            Next
 
-            ' Sumar la puntuación actual a la puntuación total
-            puntuacionTotal += puntuacionActual
-
-            ' Actualizar la línea correspondiente en el archivo de texto con la nueva puntuación total
-            Dim updatedLines As New List(Of String)()
-            Dim lineIndex As Integer = -1
-            For i As Integer = 0 To lines.Length - 1
-                Dim parts() As String = lines(i).Split(",")
-                Dim username As String = parts(0)
-                If username = nombreUsuario Then
-                    lineIndex = i
-                    Exit For
-                End If
-            Next
-            If lineIndex >= 0 Then
-                Dim parts() As String = lines(lineIndex).Split(",")
-                updatedLines.AddRange(lines.Take(lineIndex))
-                updatedLines.Add(nombreUsuario & "," & password & "," & puntuacionTotal.ToString())
-                updatedLines.AddRange(lines.Skip(lineIndex + 1))
-                File.WriteAllLines(filePath, updatedLines)
-            Else
-                ' Si el usuario no existe, agregar una nueva línea al archivo de texto con sus datos y puntuación total
-                Dim data As String = nombreUsuario & "," & password & "," & puntuacionTotal.ToString() & vbCrLf
-                File.AppendAllText(filePath, data)
+                ' Mostrar un mensaje con la puntuación total del usuario
+                MessageBox.Show("Registro completado con éxito. Su puntuación total es: " & puntuacionTotal.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
-
-            ' Mostrar un mensaje con la puntuación total del usuario
-            MessageBox.Show("Registro completado con éxito. Su puntuación total es: " & puntuacionTotal.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End If
     End Sub
     Dim palabraAcertada As String
@@ -314,7 +322,7 @@ Public Class frmJuego
             If btnDefSendes.Tag.Equals(tag) Then
                 For Each palBuscar As Palabra In Nivel
                     If tag.Equals(palBuscar.Texto, StringComparison.OrdinalIgnoreCase) Then
-                        MessageBox.Show(palBuscar.Significado)
+                        MessageBox.Show(palBuscar.Significado, "¿Qué significa esta palabra?", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End If
                 Next
             End If

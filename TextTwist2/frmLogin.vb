@@ -14,47 +14,63 @@ Public Class frmLogin
         'Next
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim username As String = txtUsername.Text
-        Dim password As String = txtPassword.Text
-        ' Verificar las credenciales en el archivo de texto
-        Dim filePath As String = "../.././Ficheros/credenciales.txt"
-        Dim credentials() As String = File.ReadAllLines(filePath)
-        For Each line As String In credentials
-            Dim parts() As String = line.Split(",")
-            If parts(0) = username AndAlso parts(1) = password Then
-                ' Credenciales correctas, mostrar el formulario principal y ocultar el formulario de inicio de sesión
-                usr = txtUsername.Text
-                usrpswrd = txtPassword.Text
-                MessageBox.Show("Credenciales Correctas", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                registrado = True
-                Form1.Show()
-                Me.Close()
-                Return
+        If Not String.IsNullOrWhiteSpace(txtUsername.Text) AndAlso Not String.IsNullOrWhiteSpace(txtPassword.Text) Then
+            Dim filePath As String = "../.././Ficheros/credenciales.txt"
+            If FicheroExisteComprobacion(filePath) Then
+                Dim username As String = txtUsername.Text
+                Dim password As String = txtPassword.Text
+                Dim credentials() As String = File.ReadAllLines(filePath)
+                For Each line As String In credentials
+                    Dim parts() As String = line.Split(",")
+                    If parts(0) = username AndAlso parts(1) = password Then
+                        ' Credenciales correctas, mostrar el formulario principal y ocultar el formulario de inicio de sesión
+                        usr = txtUsername.Text
+                        usrpswrd = txtPassword.Text
+                        MessageBox.Show("Credenciales correctas", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        registrado = True
+                        frmMenu.Show()
+                        Me.Close()
+                    End If
+                Next
+                If Not registrado Then
+                    ' Credenciales incorrectas, mostrar un mensaje de error
+                    MessageBox.Show("Credenciales incorrectas", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
             End If
-        Next
-        ' Credenciales incorrectas, mostrar un mensaje de error
-        MessageBox.Show("Credenciales incorrectas. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        registrado = False
+        Else
+            MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            registrado = False
+        End If
     End Sub
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        Dim username As String = txtUsername.Text
-        Dim password As String = txtPassword.Text
-        Dim puntuacion As String = 0 ' asumiendo que la puntuación se ingresa manualmente en un cuadro de texto
-        ' Guardar los datos en un archivo de texto
-        Dim filePath As String = "../.././Ficheros/credenciales.txt"
-        Dim lines() As String = File.ReadAllLines(filePath)
-        Dim data As String = username & "," & password & "," & puntuacion & vbCrLf ' agregar la puntuación a la cadena de datos
-        For Each line As String In lines
-            Dim parts() As String = line.Split(",")
-            Dim existingUsername As String = parts(0)
-            ' Si el usuario ya existe, mostrar un mensaje y salir del evento de registro
-            If existingUsername = username Then
-                MessageBox.Show("Ya existe el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return
+        If Not String.IsNullOrWhiteSpace(txtUsername.Text) AndAlso Not String.IsNullOrWhiteSpace(txtPassword.Text) Then
+            Dim filePath As String = "../.././Ficheros/credenciales.txt"
+            If FicheroExisteComprobacion(filePath) Then
+                Dim username As String = txtUsername.Text
+                Dim password As String = txtPassword.Text
+                Dim usuarioExiste As Boolean = False
+                Dim puntuacion As String = 0 ' asumiendo que la puntuación se ingresa manualmente en un cuadro de texto
+                ' Guardar los datos en un archivo de texto
+                Dim lines() As String = File.ReadAllLines(filePath)
+                For Each line As String In lines
+                    Dim parts() As String = line.Split(",")
+                    Dim existingUsername As String = parts(0)
+                    ' Si el usuario ya existe, mostrar un mensaje y salir del evento de registro
+                    If existingUsername = username Then
+                        MessageBox.Show("Ya existe el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        usuarioExiste = True
+                        Exit For
+                    End If
+                Next
+                If Not usuarioExiste Then
+                    ' Mostrar un mensaje de éxito
+                    MessageBox.Show("Registro completado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dim data As String = username & "," & password & "," & puntuacion & vbCrLf ' agregar la puntuación a la cadena de datos
+                    File.AppendAllText(filePath, data)
+                End If
             End If
-        Next
-        File.AppendAllText(filePath, data)
-        ' Mostrar un mensaje de éxito
-        MessageBox.Show("Registro completado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 End Class
