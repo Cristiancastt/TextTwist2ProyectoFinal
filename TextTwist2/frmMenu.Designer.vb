@@ -133,15 +133,12 @@ Partial Class frmMenu
         Me.lstRanking.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstRanking.FormattingEnabled = True
         Me.lstRanking.ItemHeight = 24
-        Me.lstRanking.Location = New System.Drawing.Point(25, 375)
+        Me.lstRanking.Location = New System.Drawing.Point(102, 363)
         Me.lstRanking.Name = "lstRanking"
         Me.lstRanking.Size = New System.Drawing.Size(330, 316)
         Me.lstRanking.TabIndex = 8
         '
-        'Timer1
-        '
-        '
-        'Form1
+        'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -156,7 +153,7 @@ Partial Class frmMenu
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form1"
+        Me.Name = "frmMenu"
         Me.Text = "TextTwist2"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
