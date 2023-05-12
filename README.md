@@ -10,5 +10,14 @@ Al comienzo de cada ronda, se te presentan seis letras en una línea y debes usa
 
 El juego tiene un temporizador que te da dos minutos para encontrar tantas palabras como sea posible antes de que se agote el tiempo. Puedes hacer clic en las letras para formar palabras y, si se acepta, aparecerá en la lista de palabras encontradas.
 
-Además, si te quedas atascado, puedes hacer clic en el botón "Mezclar" para cambiar la disposición de las letras o en el botón "Pista" para revelar una palabra oculta. Pero ten en cuenta que usar estas opciones te penalizará con puntos.
+Además, si te quedas atascado, puedes hacer clic en el botón "Mezclar" para cambiar la disposición de las letra.
+
+# Imagenes del Juego:
+## Menú Inicio:
+![Menú Inicio TextTwist2 VB.NET](https://cdn.discordapp.com/attachments/1052317488412643338/1106545856674541658/image.png)
+## Login Juego:
+![Login TextTwist2 VB.NET](https://cdn.discordapp.com/attachments/1052317488412643338/1106545731461992459/image.png)
+## Juego:
+![Juego TextTwist2 VB.NET](https://cdn.discordapp.com/attachments/1052317488412643338/1106546067593498765/image.png)
+![Juego TextTwist2 VB.NET](https://cdn.discordapp.com/attachments/1052317488412643338/1106546180952965180/image.png)
 
