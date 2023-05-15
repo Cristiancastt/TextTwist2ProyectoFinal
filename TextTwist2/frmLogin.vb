@@ -1,6 +1,5 @@
 ﻿Imports System.IO
 Imports System.Windows.Forms.LinkLabel
-
 Public Class frmLogin
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '' Leer los datos del archivo de texto y cargarlos en la interfaz de usuario
