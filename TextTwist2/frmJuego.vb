@@ -1,26 +1,22 @@
 ﻿Imports System.IO
-Imports System.Windows.Forms.LinkLabel
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports ClasesJuego
 Public Class frmJuego
-
-
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblRonda.Text = textTwist.Ronda
         extraerDatosFichero(textTwist.Ronda)
-        If sonido = True Then
+        If sonidoActivo() Then
             btnSonido.Text = "🔊"
             ConectarJuego()
         Else
             btnSonido.Text = "🔈"
             Desconectar()
         End If
+
         If tiempo = True Then
             Me.lblHora.Text = String.Format("{0:m\:ss}", TimeSpan.FromSeconds(tiempoRestante))
             Timer1.Interval = 1000 'Un segundo
             Timer1.Start()
         Else
-            Timer1.Start()
             lblHora.Text = "Ꝏ"
         End If
         lblPuntos.Text = textTwist.Puntos
@@ -81,11 +77,11 @@ Public Class frmJuego
     End Sub
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnSonido.Click
         If btnSonido.Text = "🔊" Then
-            If Desconectar() Then btnSonido.Text = "🔈"
-            sonido = False
+            Desconectar()
+            btnSonido.Text = "🔈"
         Else
-            If ConectarJuego() Then btnSonido.Text = "🔊"
-            sonido = True
+            ConectarJuego()
+            btnSonido.Text = "🔊"
         End If
     End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -214,6 +210,8 @@ Public Class frmJuego
                 End If
                 ' Mostrar un mensaje con la puntuación total del usuario
                 MessageBox.Show("Registro completado con éxito. Su puntuación total es: " & puntuacionTotal.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Parece que uno de los ficheros no existe: " & filePath, "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         End If
     End Sub

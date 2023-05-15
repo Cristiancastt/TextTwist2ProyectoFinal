@@ -128,7 +128,7 @@ Partial Class frmMenu
         '
         'lstRanking
         '
-        Me.lstRanking.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lstRanking.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lstRanking.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.lstRanking.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstRanking.FormattingEnabled = True

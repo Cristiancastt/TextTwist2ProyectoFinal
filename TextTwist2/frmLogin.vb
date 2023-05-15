@@ -36,6 +36,8 @@ Public Class frmLogin
                     ' Credenciales incorrectas, mostrar un mensaje de error
                     MessageBox.Show("Credenciales incorrectas", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
+            Else
+                MessageBox.Show("Parece que uno de los ficheros no existe: " & filePath, "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -68,6 +70,8 @@ Public Class frmLogin
                     Dim data As String = username & "," & password & "," & puntuacion & vbCrLf ' agregar la puntuación a la cadena de datos
                     File.AppendAllText(filePath, data)
                 End If
+            Else
+                MessageBox.Show("Parece que uno de los ficheros no existe: " & filePath, "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

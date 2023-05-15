@@ -1,8 +1,6 @@
-﻿Imports System.Diagnostics.Eventing.Reader
-Imports System.IO
+﻿Imports System.IO
 
 Public Class frmMenu
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnTimed.Click
         tiempo = True
         frmJuego.Show()
@@ -17,9 +15,12 @@ Public Class frmMenu
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lstRanking.Show()
-        btnSound.Text = "🔊"
-        ConectarMenu()
-        sonido = True
+        If sonidoActivo() Then
+            btnSound.Text = "🔊"
+            ConectarMenu()
+        Else
+            btnSound.Text = "🔈"
+        End If
         If registrado Then
             lblUsuario.Text = usr
             ' Leer los datos del archivo de texto y cargarlos en la interfaz de usuario
@@ -45,6 +46,8 @@ Public Class frmMenu
                 For Each item As Tuple(Of String, Integer) In ranking
                     lstRanking.Items.Add(item.Item1 & " ------ " & item.Item2)
                 Next
+            Else
+                MessageBox.Show("Parece que uno de los ficheros no existe: " & filePath, "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             lblUsuario.Text = "No Registrado"
@@ -53,19 +56,17 @@ Public Class frmMenu
     End Sub
 
     Private Sub btnSound_Click_1(sender As Object, e As EventArgs) Handles btnSound.Click
-        If btnSound.Text = "🔊" Then
+        If sonidoActivo() Then
             Desconectar()
             btnSound.Text = "🔈"
-            sonido = False
         Else
             ConectarMenu()
             btnSound.Text = "🔊"
-            sonido = True
+
         End If
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        lstRanking.Show()
         frmLogin.Show()
         Me.Close()
     End Sub
