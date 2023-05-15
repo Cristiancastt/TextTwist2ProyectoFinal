@@ -3,8 +3,8 @@ Imports System.Windows.Forms.LinkLabel
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports ClasesJuego
 Public Class frmJuego
-    Private tiempoRestante As Integer = 150 'Dos minutos en segundos
-    Dim Nivel As New ArrayList
+
+
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblRonda.Text = textTwist.Ronda
         extraerDatosFichero(textTwist.Ronda)
@@ -27,35 +27,6 @@ Public Class frmJuego
         GenerarBotones(Nivel(0).texto)
         GenerarGapsBlanco(Nivel)
     End Sub
-    Private Sub extraerDatosFichero(numero As Integer)
-        Nivel.Clear()
-        Dim lineaInicio As Integer = 0
-        Dim lineaFin As Integer = 0
-        If numero = 1 Then
-            lineaInicio = 0
-            lineaFin = 10  'todo Poner a 10 cuando acabe pruebas
-        ElseIf numero = 2 Then
-            lineaInicio = 11
-            lineaFin = 25
-        ElseIf numero = 3 Then
-            lineaInicio = 26
-            lineaFin = 40
-        End If
-        Dim filePath As String = "../.././Ficheros/palabras.txt"
-        If FicheroExisteComprobacion(filePath) Then
-            Dim lines As String() = File.ReadAllLines(filePath)
-            Dim contadorLinea As Integer = 0
-            For Each line As String In lines
-                contadorLinea += 1
-                If contadorLinea >= lineaInicio AndAlso contadorLinea <= lineaFin Then
-                    Dim valores As String() = line.Split(","c)
-                    Dim palabra As New Palabra(valores(0), valores(1))
-                    Nivel.Add(palabra)
-                End If
-            Next
-        End If
-    End Sub
-    Dim btnsGlobales As New List(Of Button)
     Private Sub Btn_Click(sender As Object, e As EventArgs)
         ' Aquí va el código que se ejecutará al hacer click en el botón
         ' Para acceder al botón que ha sido clickeado, podemos utilizar la variable "sender"
@@ -66,45 +37,6 @@ Public Class frmJuego
         btnCaracteres.Enabled = False
         btnsGlobales.Add(btnCaracteres)
     End Sub
-    Dim lblsGapsBlancos As New List(Of ArrayList)
-    Dim lblsPalabras As New ArrayList
-    Dim lblTag As New ArrayList
-    Dim lblTagUnico As New ArrayList
-    Private Sub GenerarGapsBlanco(Nivel As ArrayList)
-        Dim x As Integer = 10
-        Dim y As Integer = 10
-        Dim labelWidth As Integer = 50
-        Dim labelHeight As Integer = 30
-        Dim palabraGeneradora As Palabra
-        Dim anchoTotal As Integer = 0
-        Dim espacioEntreLabels As Integer = 10
-        Dim contador As Integer = 0
-        For Each palabraGeneradora In Nivel
-            contador += 1
-            Dim lblsPalabras As New ArrayList ' crea un nuevo ArrayList para cada palabra
-            For Each letra As Char In palabraGeneradora.Texto
-                Dim label As New Label()
-                label.Text = letra
-                label.ForeColor = Color.White 'Cambiar el color a blanco
-                label.BackColor = Color.White
-                label.Size = New Size(labelWidth, labelHeight)
-                label.Location = New Point(x, y)
-                label.Tag = palabraGeneradora
-                label.BorderStyle = BorderStyle.FixedSingle
-                Me.Controls.Add(label)
-                x += labelWidth + 5
-                If x > 10 + labelWidth * 10 + espacioEntreLabels * 9 Then
-                    x = x + espacioEntreLabels
-                    y = 10
-                End If
-                lblsPalabras.Add(label)
-            Next
-            lblsGapsBlancos.Add(lblsPalabras)
-            x = 10
-            y += labelHeight + 5
-        Next
-    End Sub
-    Private botonesA As List(Of Button) = New List(Of Button)()
     Private Sub GenerarBotones(palabra As String)
         'todo borrar todos losbotones llamado   boton.Name = "btnCaracteres" & contadorLetras
         Dim anchoBoton As Integer = 50
@@ -204,7 +136,6 @@ Public Class frmJuego
             GenerarBotones(Nivel(0).texto)
             GenerarGapsBlanco(Nivel)
         End If
-
         lblPuntos.Text = textTwist.Puntos
         Dim palabraComprobar As New Palabra(lblTextoBotones.Text)
         If textTwist.ComprobarPalabra(palabraComprobar, Nivel) Then
@@ -233,7 +164,6 @@ Public Class frmJuego
             Next
             lblTextoBotones.Text = ""
         End If
-
         If registrado Then
             Dim nombreUsuario As String = usr
             Dim password As String = usrpswrd
@@ -282,50 +212,13 @@ Public Class frmJuego
                     Dim data As String = nombreUsuario & "," & password & "," & puntuacionTotal.ToString() & vbCrLf
                     File.AppendAllText(filePath, data)
                 End If
-
                 ' Mostrar un mensaje con la puntuación total del usuario
                 MessageBox.Show("Registro completado con éxito. Su puntuación total es: " & puntuacionTotal.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
     End Sub
-    Dim palabraAcertada As String
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnLastWord.Click
         lblTextoBotones.Text = palabraAcertada
     End Sub
-    Private Sub Button1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Button1.KeyPress
-        lblPuntos.Text = textTwist.Puntos
-    End Sub
-    Private Sub MostrarDefinicion(x As Integer, y As Integer)
-        Dim btnDef As New Button
-        For Each tag1 As String In lblTag
-            If Not lblTagUnico.Contains(tag1) Then
-                lblTagUnico.Add(tag1)
-            End If
-        Next
-        For Each tag2 As String In lblTagUnico
-            btnDef.Name = "btnDef"
-            btnDef.FlatStyle = FlatStyle.Flat
-            btnDef.BackgroundImageLayout = ImageLayout.Stretch
-            btnDef.BackgroundImage = New Bitmap(My.Resources.interrogante, 20, 15)
-            'btnDef.Text = "?"
-            btnDef.FlatAppearance.BorderSize = 0
-            btnDef.Location = New Point(x, y)
-            btnDef.Size = New Size(35, 25)
-            btnDef.Tag = tag2
-            Controls.Add(btnDef)
-        Next
-        AddHandler btnDef.Click, AddressOf btnDef_click
-    End Sub
-    Private Sub btnDef_click(sender As Object, a As EventArgs)
-        Dim btnDefSendes As Button = sender
-        For Each tag As String In lblTagUnico
-            If btnDefSendes.Tag.Equals(tag) Then
-                For Each palBuscar As Palabra In Nivel
-                    If tag.Equals(palBuscar.Texto, StringComparison.OrdinalIgnoreCase) Then
-                        MessageBox.Show(palBuscar.Significado, "¿Qué significa esta palabra?", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    End If
-                Next
-            End If
-        Next
-    End Sub
+
 End Class
