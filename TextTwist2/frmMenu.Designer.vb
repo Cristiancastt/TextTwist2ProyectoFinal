@@ -33,6 +33,7 @@ Partial Class frmMenu
         Me.lblUsuario = New System.Windows.Forms.Label()
         Me.lstRanking = New System.Windows.Forms.ListBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnAyuda = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -128,7 +129,7 @@ Partial Class frmMenu
         '
         'lstRanking
         '
-        Me.lstRanking.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lstRanking.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lstRanking.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.lstRanking.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstRanking.FormattingEnabled = True
@@ -138,12 +139,26 @@ Partial Class frmMenu
         Me.lstRanking.Size = New System.Drawing.Size(330, 316)
         Me.lstRanking.TabIndex = 8
         '
+        'btnAyuda
+        '
+        Me.btnAyuda.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAyuda.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnAyuda.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAyuda.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnAyuda.Location = New System.Drawing.Point(1086, 668)
+        Me.btnAyuda.Name = "btnAyuda"
+        Me.btnAyuda.Size = New System.Drawing.Size(67, 53)
+        Me.btnAyuda.TabIndex = 9
+        Me.btnAyuda.Text = "❔"
+        Me.btnAyuda.UseVisualStyleBackColor = False
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1272, 742)
+        Me.Controls.Add(Me.btnAyuda)
         Me.Controls.Add(Me.lstRanking)
         Me.Controls.Add(Me.lblUsuario)
         Me.Controls.Add(Me.btnLogin)
@@ -170,4 +185,5 @@ Partial Class frmMenu
     Friend WithEvents lblUsuario As Label
     Friend WithEvents lstRanking As ListBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents btnAyuda As Button
 End Class
