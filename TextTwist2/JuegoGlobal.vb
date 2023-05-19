@@ -63,7 +63,7 @@ Module JuegoGlobal
             For Each line As String In lines
                 contadorLinea += 1
                 If contadorLinea >= lineaInicio AndAlso contadorLinea <= lineaFin Then
-                    Dim valores As String() = line.Split(","c)
+                    Dim valores As String() = line.Split(",")
                     Dim palabra As New Palabra(valores(0), valores(1))
                     Nivel.Add(palabra)
                 End If
