@@ -6,7 +6,6 @@ Public Class frmLogin
         '' Leer los datos del archivo de texto y cargarlos en la interfaz de usuario
         'Dim filePath As String = "credenciales.txt"
         'Dim lines() As String = File.ReadAllLines(filePath)
-
         'For Each line As String In lines
         '    Dim parts() As String = line.Split(",")
         '    Dim username As String = parts(0)
