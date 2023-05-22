@@ -6,24 +6,22 @@ Module JuegoGlobal
     Public tiempo, registrado As Boolean
     Private sonido As Boolean = True
     Public tiempoRestante As Integer = 150 'Dos minutos en segundos
-    Public Function ConectarMenu() As Boolean
+    Public Sub ConectarMenu()
         sonido = True
         Try
             My.Computer.Audio.Play(My.Resources.MainMenu, AudioPlayMode.BackgroundLoop)
         Catch ex As Exception
             MessageBox.Show("Parece que uno de los recursos para la música no existe. El juego continuará sin música.", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-        Return True
-    End Function
-    Public Function ConectarJuego() As Boolean
+    End Sub
+    Public Sub ConectarJuego()
         sonido = True
         Try
             My.Computer.Audio.Play(My.Resources.MainGame, AudioPlayMode.BackgroundLoop)
         Catch ex As Exception
             MessageBox.Show("Parece que uno de los recursos para la música no existe. El juego continuará sin música.", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-        Return True
-    End Function
+    End Sub
     Public Sub Desconectar()
         sonido = False
         My.Computer.Audio.Stop()

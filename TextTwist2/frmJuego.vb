@@ -76,7 +76,7 @@ Public Class frmJuego
         End If
     End Sub
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnSonido.Click
-        If btnSonido.Text = "🔊" Then
+        If sonidoActivo() Then
             Desconectar()
             btnSonido.Text = "🔈"
         Else

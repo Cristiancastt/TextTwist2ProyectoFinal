@@ -20,6 +20,7 @@ Public Class frmMenu
             ConectarMenu()
         Else
             btnSound.Text = "🔈"
+            Desconectar()
         End If
         If registrado Then
             lblUsuario.Text = usr
