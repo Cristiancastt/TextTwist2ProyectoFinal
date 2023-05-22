@@ -76,4 +76,9 @@ Public Class frmLogin
             MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        frmMenu.Show()
+        Me.Close()
+    End Sub
 End Class
