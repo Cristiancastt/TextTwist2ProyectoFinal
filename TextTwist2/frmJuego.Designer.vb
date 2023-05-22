@@ -242,6 +242,7 @@ Partial Class frmJuego
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Name = "frmJuego"
         Me.Text = "frmJuego"
         Me.ResumeLayout(False)

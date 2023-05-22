@@ -62,7 +62,6 @@ Public Class frmMenu
         Else
             ConectarMenu()
             btnSound.Text = "🔊"
-
         End If
     End Sub
 
@@ -70,4 +69,15 @@ Public Class frmMenu
         frmLogin.Show()
         Me.Close()
     End Sub
+
+    Public Sub btnAyuda_Click(sender As Object, e As EventArgs) Handles btnAyuda.Click
+        MessageBox.Show("En este juego se pondrá a prueba tu vocabulario de español. Con las letras que se muestren disponibles, deberás formar palabras de 3 o más letras. Cada acierto te otorgará 1500 puntos. Puedes escoger el modo contrarreloj, en el cual tendrás que intentar acertar el máximo número de palabras y acumular la cantidad más alta de puntos posibles, poniendo a prueba tu rapidez mental, o puedes escoger el modo interminable, donde podrás tomarte tu tiempo para pensar y descifrar las palabras a tu ritmo.", "Ayuda de usuario", MessageBoxButtons.OK, MessageBoxIcon.Question)
+    End Sub
+
+    Private Sub frmMenu_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If ActiveForm Is Me AndAlso e.KeyCode = Keys.F1 Then
+            btnAyuda_Click(sender, e)
+        End If
+    End Sub
+
 End Class

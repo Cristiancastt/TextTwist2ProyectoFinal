@@ -219,4 +219,10 @@ Public Class frmJuego
         lblTextoBotones.Text = palabraAcertada
     End Sub
 
+    Private Sub frmJuego_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If ActiveForm Is Me AndAlso e.KeyCode = Keys.F1 Then
+            frmMenu.btnAyuda_Click(sender, e)
+        End If
+    End Sub
+
 End Class
