@@ -14,8 +14,8 @@ Public Class frmLogin
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If Not String.IsNullOrWhiteSpace(txtUsername.Text) AndAlso Not String.IsNullOrWhiteSpace(txtPassword.Text) Then
-            Dim filePath As String = "../.././Ficheros/credenciales.txt"
-            If FicheroExisteComprobacion(filePath) Then
+            If textTwist.extraerCredenciales() <> Nothing Then
+                Dim filePath As String = textTwist.extraerCredenciales()
                 Dim username As String = txtUsername.Text
                 Dim password As String = txtPassword.Text
                 Dim credentials() As String = File.ReadAllLines(filePath)
@@ -36,7 +36,7 @@ Public Class frmLogin
                     MessageBox.Show("Credenciales incorrectas", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
-                MessageBox.Show("Parece que uno de los ficheros no existe: " & filePath, "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Parece que uno de los ficheros no existe: credenciales.txt", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -45,8 +45,8 @@ Public Class frmLogin
     End Sub
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         If Not String.IsNullOrWhiteSpace(txtUsername.Text) AndAlso Not String.IsNullOrWhiteSpace(txtPassword.Text) Then
-            Dim filePath As String = "../.././Ficheros/credenciales.txt"
-            If FicheroExisteComprobacion(filePath) Then
+            If textTwist.extraerCredenciales() <> Nothing Then
+                Dim filePath As String = textTwist.extraerCredenciales()
                 Dim username As String = txtUsername.Text
                 Dim password As String = txtPassword.Text
                 Dim usuarioExiste As Boolean = False
@@ -70,7 +70,7 @@ Public Class frmLogin
                     File.AppendAllText(filePath, data)
                 End If
             Else
-                MessageBox.Show("Parece que uno de los ficheros no existe: " & filePath, "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Parece que uno de los ficheros no existe: credenciales.txt", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

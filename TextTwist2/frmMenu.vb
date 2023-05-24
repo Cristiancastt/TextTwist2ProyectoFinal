@@ -25,8 +25,8 @@ Public Class frmMenu
         If registrado Then
             lblUsuario.Text = usr
             ' Leer los datos del archivo de texto y cargarlos en la interfaz de usuario
-            Dim filePath As String = "../.././Ficheros/credenciales.txt"
-            If FicheroExisteComprobacion(filePath) Then
+            If textTwist.extraerCredenciales() <> Nothing Then
+                Dim filePath As String = textTwist.extraerCredenciales()
                 Dim lines() As String = File.ReadAllLines(filePath)
 
                 ' Crear una lista de tuplas (nombre de usuario, puntuación)
@@ -48,7 +48,7 @@ Public Class frmMenu
                     lstRanking.Items.Add(item.Item1 & " ------ " & item.Item2)
                 Next
             Else
-                MessageBox.Show("Parece que uno de los ficheros no existe: " & filePath, "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Parece que uno de los ficheros no existe: credenciales.txt", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             lblUsuario.Text = "No Registrado"

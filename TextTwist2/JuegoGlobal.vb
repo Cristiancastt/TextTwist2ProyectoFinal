@@ -29,9 +29,7 @@ Module JuegoGlobal
     Public Function sonidoActivo() As Boolean
         Return sonido
     End Function
-    Public Function FicheroExisteComprobacion(filePath As String) As Boolean
-        Return System.IO.File.Exists(filePath)
-    End Function
+
     Public Sub EliminarBotones()
         For Each btn As Button In frmJuego.Controls.OfType(Of Button)()
             If btn.Name = "btnDef" Then
@@ -40,7 +38,7 @@ Module JuegoGlobal
         Next
     End Sub
     Public Nivel As New ArrayList
-    Public Sub extraerDatosFichero(numero As Integer)
+    Public Sub extraerDatosPalabras(numero As Integer)
         Nivel.Clear()
         Dim lineaInicio As Integer = 0
         Dim lineaFin As Integer = 0
@@ -54,9 +52,8 @@ Module JuegoGlobal
             lineaInicio = 26
             lineaFin = 40
         End If
-        Dim filePath As String = "../.././Ficheros/palabras.txt"
-        If FicheroExisteComprobacion(filePath) Then
-            Dim lines As String() = File.ReadAllLines(filePath)
+        If textTwist.extraerPalabras() <> Nothing Then
+            Dim lines As String() = File.ReadAllLines(textTwist.extraerPalabras())
             Dim contadorLinea As Integer = 0
             For Each line As String In lines
                 contadorLinea += 1

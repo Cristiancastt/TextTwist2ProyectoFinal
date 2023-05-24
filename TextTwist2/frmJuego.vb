@@ -3,7 +3,7 @@ Imports ClasesJuego
 Public Class frmJuego
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblRonda.Text = textTwist.Ronda
-        extraerDatosFichero(textTwist.Ronda)
+        extraerDatosPalabras(textTwist.Ronda)
         If sonidoActivo() Then
             btnSonido.Text = "🔊"
             ConectarJuego()
@@ -128,7 +128,7 @@ Public Class frmJuego
             lblTag.Clear()
             lblTagUnico.Clear()
             lblsGapsBlancos.Clear()
-            extraerDatosFichero(textTwist.Ronda)
+            extraerDatosPalabras(textTwist.Ronda)
             GenerarBotones(Nivel(0).texto)
             GenerarGapsBlanco(Nivel)
         End If
@@ -167,9 +167,9 @@ Public Class frmJuego
 
             ' Verificar si el usuario ya existe en el archivo de texto y obtener su puntuación total
             Dim puntuacionTotal As Integer = 0
-            Dim filePath As String = "../.././Ficheros/credenciales.txt"
-            If FicheroExisteComprobacion(filePath) Then
-                Dim lines() As String = File.ReadAllLines(filePath)
+            If textTwist.extraerPalabras() <> Nothing Then
+                Dim filePath As String = textTwist.extraerPalabras()
+                Dim lines() As String = File.ReadAllLines(textTwist.extraerPalabras())
                 For Each line As String In lines
                     Dim parts() As String = line.Split(",")
                     Dim username As String = parts(0)
@@ -211,7 +211,7 @@ Public Class frmJuego
                 ' Mostrar un mensaje con la puntuación total del usuario
                 MessageBox.Show("Registro completado con éxito. Su puntuación total es: " & puntuacionTotal.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Parece que uno de los ficheros no existe: " & filePath, "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Parece que uno de los ficheros no existe: palabras.txt", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         End If
     End Sub
