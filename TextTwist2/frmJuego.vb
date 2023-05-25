@@ -209,7 +209,7 @@ Public Class frmJuego
                     File.AppendAllText(filePath, data)
                 End If
                 ' Mostrar un mensaje con la puntuación total del usuario
-                MessageBox.Show("Registro completado con éxito. Su puntuación total es: " & puntuacionTotal.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                'MessageBox.Show("Registro completado con éxito. Su puntuación total es: " & puntuacionTotal.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
                 MessageBox.Show("Parece que uno de los ficheros no existe: palabras.txt", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

@@ -136,7 +136,7 @@ Partial Class frmMenu
         Me.lstRanking.ItemHeight = 24
         Me.lstRanking.Location = New System.Drawing.Point(102, 363)
         Me.lstRanking.Name = "lstRanking"
-        Me.lstRanking.Size = New System.Drawing.Size(330, 316)
+        Me.lstRanking.Size = New System.Drawing.Size(330, 340)
         Me.lstRanking.TabIndex = 8
         '
         'btnAyuda

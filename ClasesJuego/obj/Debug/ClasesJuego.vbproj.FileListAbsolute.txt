@@ -68,3 +68,13 @@ C:\Users\Cristian\Desktop\TextTwist\TextTwist2ProyectoFinal\ClasesJuego\obj\Debu
 C:\Users\Cristian\Desktop\TextTwist\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.dll
 C:\Users\Cristian\Desktop\TextTwist\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.xml
 C:\Users\Cristian\Desktop\TextTwist\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.pdb
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\bin\Debug\ClasesJuego.dll
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\bin\Debug\ClasesJuego.pdb
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\bin\Debug\ClasesJuego.xml
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.vbproj.AssemblyReference.cache
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.Resources.resources
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.vbproj.GenerateResource.cache
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.vbproj.CoreCompileInputs.cache
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.dll
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.xml
+C:\Users\Cristian\Desktop\FINAL\TextTwist2ProyectoFinal\ClasesJuego\obj\Debug\ClasesJuego.pdb

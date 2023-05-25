@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 Imports ClasesJuego
-Module JuegoGlobal
+Public Module JuegoGlobal
     Public usr, usrpswrd As String
     Public textTwist As New Juego
     Public tiempo, registrado As Boolean
@@ -144,4 +144,79 @@ Module JuegoGlobal
             End If
         Next
     End Sub
+
+    Public Function login(usuario As String, contra As String) As Boolean
+        If Not String.IsNullOrWhiteSpace(usuario) AndAlso Not String.IsNullOrWhiteSpace(contra) Then
+            If textTwist.extraerCredenciales() <> Nothing Then
+                Dim filePath As String = textTwist.extraerCredenciales()
+                Dim username As String = usuario
+                Dim password As String = contra
+                Dim credentials() As String = File.ReadAllLines(filePath)
+                For Each line As String In credentials
+                    Dim parts() As String = line.Split(",")
+                    If parts(0) = username AndAlso parts(1) = password Then
+                        ' Credenciales correctas, mostrar el formulario principal y ocultar el formulario de inicio de sesión
+                        usr = usuario
+                        usrpswrd = contra
+                        MessageBox.Show("Credenciales correctas", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        registrado = True
+                        frmMenu.Show()
+                        'Me.Close()
+                        Return True
+                    End If
+                Next
+                If Not registrado Then
+                    ' Credenciales incorrectas, mostrar un mensaje de error
+                    MessageBox.Show("Credenciales incorrectas", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return False
+                End If
+            Else
+                MessageBox.Show("Parece que uno de los ficheros no existe: credenciales.txt", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Else
+            MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            registrado = False
+        End If
+    End Function
+    Public Function register(usuario As String, contra As String) As Boolean
+        If Not String.IsNullOrWhiteSpace(usuario) AndAlso Not String.IsNullOrWhiteSpace(contra) Then
+            If textTwist.extraerCredenciales() <> Nothing Then
+                Dim filePath As String = textTwist.extraerCredenciales()
+                Dim username As String = usuario
+                Dim password As String = contra
+                Dim usuarioExiste As Boolean = False
+                Dim puntuacion As String = "0" ' Asignar un valor inicial a la puntuación como cadena
+
+                ' Guardar los datos en un archivo de texto
+                Dim lines() As String = File.ReadAllLines(filePath)
+
+                ' Verificar si el usuario ya existe
+                For Each line As String In lines
+                    Dim parts() As String = line.Split(",")
+                    Dim existingUsername As String = parts(0).Trim() ' Eliminar espacios en blanco alrededor del nombre de usuario
+
+                    ' Si el usuario ya existe, mostrar un mensaje y salir del evento de registro
+                    If existingUsername = username Then
+                        MessageBox.Show("Ya existe el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        usuarioExiste = True
+                        Exit For
+                        Return False
+                    End If
+                Next
+                If Not usuarioExiste Then
+                    MessageBox.Show("Registro completado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dim newData As String = username & "," & password & "," & puntuacion
+                    File.AppendAllText(filePath, Environment.NewLine & newData)
+                    Return True
+                End If
+            Else
+                MessageBox.Show("Parece que uno de los ficheros no existe: credenciales.txt", "Error en los archivos del juego", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Else
+            MessageBox.Show("Ninguno de los campos puede estar en blanco. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+        Return False
+    End Function
+
 End Module
